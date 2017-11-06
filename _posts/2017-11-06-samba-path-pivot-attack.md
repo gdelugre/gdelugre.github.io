@@ -2,7 +2,6 @@
 layout: post
 title: The path pivot attack
 description: Exploiting CVE-2017-2619 with a fake USB drive
-categories: samba exploitation usb
 author: Guillaume Delugré
 ---
 
