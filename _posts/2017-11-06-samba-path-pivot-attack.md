@@ -3,6 +3,9 @@ layout: post
 title: The path pivot attack
 description: Exploiting CVE-2017-2619 with a fake USB drive
 author: Guillaume Delugré
+twitter_card:
+    type: summary
+    image: /assets/path_pivot.png
 ---
 
 In April was published [CVE-2017-2619][cve-2017-2619], a race condition vulnerability affecting Samba. The vulnerability is described as follows:
