@@ -115,7 +115,7 @@ If we consider a path ``a/b/c`` pointing to a file ``f``, we can chain a large n
 ![Symlink chain]({{ "assets/symlink_chain.png" | relative_url }}){: class="img-responsive" width="50%"}
 {: refdef}
 
-While the ``realpath`` operation is stuck with low I/Os in ``lstat`` and ``readlink``, we can begin the process of evicting our cached symlink entries (the green boxes in the picture). Different strategies can be adopted for that aim. The easiest one is to perform a [SMBLoris](https://smbloris.com) attack to create a high number of connections and allocate a lot of memory. Under high memory pressure, the dcache will shrink. It only takes a few seconds to fill the memory and for the dentries to get evicted, so the race is easily winable. Of course this would also work with any other DoS vulnerabilities leading to high memory consumption.
+While the ``realpath`` operation is stuck with slow I/Os in ``lstat`` and ``readlink``, we can begin the process of evicting our cached symlink entries (the green boxes in the picture). Different strategies can be adopted for that aim. The easiest one is to perform a [SMBLoris](https://smbloris.com) attack to create a high number of connections and allocate a lot of memory. Under high memory pressure, the dcache will shrink. It only takes a few seconds to fill the memory and for the dentries to get evicted, so the race is easily winable. Of course this would also work with any other DoS vulnerabilities leading to high memory consumption.
 
 The time for the dentries to be evicted depends on the amount of RAM available on the device. It may require some calibration for the DoS to occupy enough memory to shrink the cache without triggering the OOM killer.
 
