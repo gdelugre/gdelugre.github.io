@@ -52,11 +52,11 @@ excerpt_separator: "<!-- more -->"
 # Outputting
 permalink: /:year/:month/:day/:title/
 paginate_path: /posts/:num/
-paginate: 5
+paginate: 3
 
 # Markdown settings
 kramdown:
-  auto_ids: false
+  auto_ids: true
   enable_coderay: false
   entity_output: as_char
   footnote_nr: 1

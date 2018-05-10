@@ -42,6 +42,7 @@ $on-laptop:        800px !default;
 // Import partials.
 @import
   "whiteglass/base",
+  "whiteglass/tree",
   "whiteglass/layout",
   "whiteglass/syntax-highlighting"
 ;
