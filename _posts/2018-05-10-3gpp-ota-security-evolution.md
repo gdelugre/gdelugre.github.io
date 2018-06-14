@@ -198,7 +198,7 @@ The key derivation functions are based on ``HMAC-SHA256``. The key hierarchy upo
 ``K``<sub>``D``</sub> can be negociated between the two UEs in two ways:
 
 1. by separately interacting with a key management server (PKMF) located in the network core.
-2. by direct communication with each other. The standard mentions the use of ``ECCSI`` (*Elliptic Curse-based Certificateless Signatures for Identity-based Encryption*) and ``SAKKE`` (*Sakai Kasahara Key Encryption*), both defined in [RFC 6507][] and [RFC 6508][].
+2. by direct communication with each other. The standard mentions the use of ``ECCSI`` (*Elliptic Curve-based Certificateless Signatures for Identity-based Encryption*) and ``SAKKE`` (*Sakai Kasahara Key Encryption*), both defined in [RFC 6507][] and [RFC 6508][].
 
 Once two UEs need to communicate with each other, they establish a secure communication channel:
 1. UE<sub>1</sub> ⟶ UE<sub>2</sub> : *Direct Communication Request* (``LTK`` id, ``K``<sub>``D``</sub> id, algorithms, ``Nonce_1``)
